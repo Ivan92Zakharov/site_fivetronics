@@ -1,0 +1,29 @@
+$YH1: #ECE91F;
+
+
+@mixin transition($a) {
+   -webkit-transition: $a linear;
+      -moz-transition: $a linear;
+       -ms-transition: $a linear;
+        -o-transition: $a linear;
+           transition: $a linear;
+}
+@mixin transition-delay($a) {
+   -webkit-transition-delay: $a;
+      -moz-transition-delay: $a;
+       -ms-transition-delay: $a;
+        -o-transition-delay: $a;
+           transition-delay: $a;
+}
+@mixin transform($y) {
+   -webkit-transform: translateY($y);
+      -moz-transform: translateY($y);
+       -ms-transform: translateY($y);
+        -o-transform: translateY($y);
+           transform: translateY($y);
+}
+@mixin no-flicker {
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}

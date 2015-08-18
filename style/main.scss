@@ -1,0 +1,140 @@
+a {
+  color: #00B7FF;
+}
+
+body {
+  // padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#page{
+  position: absolute;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #999;
+  overflow: hidden;
+  z-index: 0;
+
+  .left{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    background: url("/images/left.jpg") left no-repeat;
+    background-size: cover;
+  }
+
+  .right{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background: url("/images/right.jpg") right no-repeat;
+    background-size: cover;
+  }
+  .yellow_left{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    background-color: $YH1;
+    @include transition(.3s);
+    opacity: 0;
+    &:hover{
+      @include transition(.3s);
+      opacity: .95;
+      filter: alpha(opacity=95);
+      .intro{
+        @include transition-delay(1s);
+        @include transition(0.7s);
+        @include transform(-30px);
+        opacity: 1;
+      }
+    }
+  }
+  .yellow_right{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background-color: $YH1;
+    @include transition(.3s);
+    opacity: 0;
+    &:hover{
+      @include transition(.3s);
+      opacity: 0.95;
+      filter: alpha(opacity=95);
+      .intro{
+        @include transition-delay(1s);
+        @include transition(0.7s);
+        @include transform(-30px);
+        opacity: 1;
+      }
+    }
+  }
+}
+.intro{
+  margin: auto 0;
+  padding: 280px 50px;
+  text-align: center;
+  opacity: 0;
+  @include no-flicker;
+  h2{
+    @include no-flicker;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.title{
+  @include no-flicker;
+  margin-top: 100px;
+  font-size: 100px;
+  font-weight: lighter;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+#owl-example{
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.i{
+  display: inline-block;
+  width: 600px;
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.owl-prev{
+  width: 70px;
+  height: 22px;
+  position: relative;
+  top: -250px;
+  left: -350px;
+  padding-top: 10px !important;
+}
+.owl-next{
+  width: 70px;
+  height: 22px;
+  position: relative;
+  top: -250px;
+  right: -350px;
+  padding-top: 10px !important;
+}
+
+
+
+
+
