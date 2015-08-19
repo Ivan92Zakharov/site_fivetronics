@@ -1,5 +1,11 @@
 $YH1: #ECE91F;
 
+#page a{
+    text-decoration: none;
+    color: #333;
+  }
+
+
 
 @mixin transition($a) {
    -webkit-transition: $a linear;
@@ -27,3 +33,4 @@ $YH1: #ECE91F;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
 }
+

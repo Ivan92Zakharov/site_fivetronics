@@ -3,7 +3,6 @@ a {
 }
 
 body {
-  // padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -16,7 +15,6 @@ body {
   background-color: #999;
   overflow: hidden;
   z-index: 0;
-
   .left{
     position: absolute;
     height: 100%;
@@ -99,6 +97,47 @@ body {
   text-align: center;
   color: white;
 }
+
+#back{
+  position: absolute;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: #aaa;
+}
+
+.casing{
+  position: relative;
+  width: 380px;
+  height: 200px;
+  padding: 0 20px;
+  .foto{
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/42.jpg");
+    background-size: cover;
+    background-color: #999;
+  }
+  span.fio{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  span.post{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size: 10px;
+    font-style: italic;
+    color: $YH1;
+  }
+}
+
+
+
 
 
 

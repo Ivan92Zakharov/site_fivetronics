@@ -5,5 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'FIVETRONICS' });
 });
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'FIVETRONICS' });
+});
 
 module.exports = router;
