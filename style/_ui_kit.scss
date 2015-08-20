@@ -5,7 +5,10 @@ $YH1: #ECE91F;
     color: #333;
   }
 
-
+@mixin opacity($o) {
+  filter: alpha(opacity=$o);
+  opacity: $o/100;
+}
 
 @mixin transition($a) {
    -webkit-transition: $a linear;

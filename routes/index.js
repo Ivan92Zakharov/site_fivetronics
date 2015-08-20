@@ -1,12 +1,8 @@
-var express = require('express');
-var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
+exports.index = function(req, res){
   res.render('index', { title: 'FIVETRONICS' });
-});
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'FIVETRONICS' });
-});
+};
 
-module.exports = router;
+exports.partials = function (req, res) {
+  var name = req.params.name;
+  res.render('partials/' + name, { title: 'FIVETRONICS' });
+};

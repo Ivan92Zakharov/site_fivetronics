@@ -1,15 +1,18 @@
-extends layout
+extends ../layout
 block content
-  #back
+  video#back(muted loop preload="auto" poster="/images/contact.jpg" autoplay)
+    source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4")
+  //- #black_back
   a(href="/") BACK
   .casing
     .foto
     span.fio Николай Лермонтов
     br
     span.post лучший программист
-
+  br
   .casing
     .foto(style='background-image: url("/images/24.jpg");')
     span.fio Глеб Глинберг
     br
     span.post главный бухгалтер
+

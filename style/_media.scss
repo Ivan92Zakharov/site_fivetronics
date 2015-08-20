@@ -1,0 +1,14 @@
+@media screen and (max-width: 764px) {
+  #page{
+    .left{
+      top: 0;
+    }
+    .right{
+      bottom: 0;
+    }
+    .half{
+      height: 50%;
+      width: 100%;
+    }
+  }
+}
