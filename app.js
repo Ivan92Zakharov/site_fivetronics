@@ -8,11 +8,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var enchilada    = require('enchilada');
 var quesadilla   = require('quesadilla');
-routes          = require('./routes');
-var debug       = require('debug')('app');
-var port        = process.env.PORT || 5000;
-var app = express();
-var production = process.env.NODE_ENV === 'production';
+routes           = require('./routes');
+var format      = require('util').format;
+var debug        = require('debug')('app');
+var port         = process.env.PORT || 5000;
+var app          = express();
+var production   = process.env.NODE_ENV === 'production';
 // view engine setup
 
 app.use(logger('dev'));
@@ -37,6 +38,7 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 app.get('*', routes.index);
 // app.use('/contact', routes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

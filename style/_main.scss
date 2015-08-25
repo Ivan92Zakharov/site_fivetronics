@@ -6,6 +6,37 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+#arrow{
+  position: absolute;
+  left:calc(50% - 25px);
+  top: 70%;
+  background-color: red;
+  background-image: url("arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include rotate(180deg);
+  @include transition(.6s);
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+  &:hover{
+    cursor: pointer;
+  }
+}
+@keyframes shake{
+  10%{
+    @include rotate(170deg);
+  }
+  20% {
+    @include rotate(185deg);
+  }
+  80% {
+    @include rotate(195deg);
+  }
+  90% {
+    @include rotate(180deg);
+  }
+}
 #page{
   position: absolute;
   display: block;
@@ -19,18 +50,16 @@ body {
     position: absolute;
     height: 100%;
     width: 50%;
-    @include transition(.3s);
   }
   .left{
-
     left: 0;
+  }
+  .right{
+    left: 50%;
   }
   .left.image{
     background: url("/images/left.jpg") left no-repeat;
     background-size: cover;
-  }
-  .right{
-    right: 0;
   }
   .right.image{
     background: url("/images/right.jpg") right no-repeat;
@@ -38,57 +67,49 @@ body {
   }
   .yellow{
     background-color: $YH1;
-    // @include transition(.3s);
-    // @include opacity(95);
-    .intro{
-      // @include transition-delay(1s);
-      // @include transition(0.3s);
-      @include opacity(100);
-    }
-    .subtitle{
-      color: #333;
-      // @include transition(0.3s);
-    }
-    // &:hover{
-    //   @include transition(.3s);
-    //   @include opacity(95);
-    //   .title{
-    //     @include opacity(100);
-    //   }
-    // }
+    left: 0;
+    @include opacity(90);
   }
 }
-.foo{
-
-}
 .intro{
-  margin: auto 0;
-  padding: 150px 50px;
-  text-align: center;
-  opacity: 0;
   @include no-flicker;
+  @include opacity(100);
   @include transition(.3s);
+  margin: auto 0;
+  padding: 350px 50px;
+  text-align: center;
+  z-index: 100;
 }
 
 .title{
   @include no-flicker;
+  @include transition(0.3s);
   font-size: 50px;
   font-weight: bold;
-  // position: relative;
+  position: relative;
   text-align: center;
   color: white;
   width: 50%;
-  @include opacity(100);
+  top: 100px;
+  z-index: 1000;
 }
 .subtitle{
+  position: relative;
   @include no-flicker;
+  // @include transition(0.2s);
+  text-align: center;
   font-size: 40px;
-  font-weight: bold;
-  @include transition(0.3s);
   color: white;
-  z-index: 10;
+  font-weight: bold;
+  top: 200px;
+  z-index: 1000;
 }
-
+.text_hide{
+  @include opacity(0);
+}
+.text_black{
+  color: #333;
+}
 
 #black_back{
   position: absolute;

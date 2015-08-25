@@ -1,14 +1,38 @@
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 767px) {
   #page{
     .left{
       top: 0;
     }
     .right{
-      bottom: 0;
+      left: 0;
+      top: 50%;
     }
     .half{
       height: 50%;
       width: 100%;
     }
+    .yellow{
+      top:0;
+    }
   }
+  .intro{
+    display: none;
+  }
+  #left + .title + .subtitle{
+    top: 2%;
+  }
+  #right + .title + .subtitle{
+    top: 52%;
+  }
+
+  #arrow{
+  position: absolute;
+  top:calc(50% - 25px);
+  left:calc(50% - 25px);
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  transform: rotate(270deg);
+  z-index: 1000;
+}
 }
