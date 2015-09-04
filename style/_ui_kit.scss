@@ -44,3 +44,10 @@ $YH1: #ECE91F;
   -webkit-transform-style: preserve-3d;
 }
 
+@mixin backgroundSize($size){
+  -webkit-background-size: $size;
+     -moz-background-size: $size;
+       -o-background-size: $size;
+          background-size: $size;
+}
+

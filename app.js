@@ -1,5 +1,6 @@
 process.env.DEBUG = 'app';
 
+
 var express      = require('express');
 var path         = require('path');
 var favicon      = require('serve-favicon');
@@ -9,7 +10,7 @@ var bodyParser   = require('body-parser');
 var enchilada    = require('enchilada');
 var quesadilla   = require('quesadilla');
 routes           = require('./routes');
-var format      = require('util').format;
+var format       = require('util').format;
 var debug        = require('debug')('app');
 var port         = process.env.PORT || 5000;
 var app          = express();

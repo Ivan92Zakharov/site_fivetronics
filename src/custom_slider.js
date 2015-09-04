@@ -1,13 +1,23 @@
 $(document).ready(function() {
-  $("#owl-example").owlCarousel({
-    autoPlay        : false,
-    stopOnHover     : true,
-    singleItem      : true,
-    navigation      : true,
-    navigationText  : ["<",">"],
-    paginationNumbers : true,
-    transitionStyle : "fadeUp"
+  $(".owl-carousel").owlCarousel({
+    loop:true,
+    items: 1,
+    nav: true,
+    animateOut: "slideInRight",
+    dots: true
   });
+
+  $(".owl-item").css("height", $(window).height());
+  $(window).resize(function(){
+    $(".owl-item").css("height", $(window).height());
+  });
+  // var owl = $('.owl-carousel');
+  // owl.on('prev.owl.carousel', function(event){
+  //   animateOut: "slideInRight"
+  //   console.log('Hello!!!');
+  // });
+
+
 });
 
 
