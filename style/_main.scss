@@ -21,7 +21,7 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: red;
+  background-color: white;
   overflow: hidden;
   z-index: -1000;
   .half{
@@ -235,20 +235,21 @@ body {
   z-index: -10;
   .guru{
     height: 100%;
-    background-color: red;
+    background-color: white;
     background-size: cover;
     background-position: 20%;
     background-image: url(images/BG_Gurustroy.jpg);
   }
   .tales{
     height: 100%;
-    background-color: red;
+    background-color: white;
     background-size: cover;
     background-position: 20%;
     background-image: url(images/BG_Fairytales.jpg);
   }
 }
 .desc{
+  margin-top: 100px;
   width: 100%;
   text-align: left;
   font-size: 13px;
@@ -373,7 +374,7 @@ body {
   position: absolute;
   left:calc(50% - 25px);
   top: 70%;
-  background-color: red;
+  background-color: white;
   background-image: url("arrow.png");
   background-repeat: no-repeat;
   background-size: cover;
