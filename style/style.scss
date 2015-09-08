@@ -1,3 +1,7 @@
+$grid-columns:      12 !default;
+$grid-gutter-width: 35px !default;
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+// @import '../node_modules/font-awesome/scss/font-awesome';
 @import 'owl.carousel';
 @import 'owl.theme';
 @import 'owl.transitions';

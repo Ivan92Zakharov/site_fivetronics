@@ -3,18 +3,345 @@ a {
 }
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  // font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  font: 14px 'Open Sans', sans-serif;
+  text-align: center;
+  font-weight: 400;
 }
 
-#project{
+//Home page
+
+@keyframes loading{
+
+}
+#page{
   position: absolute;
   display: block;
   top: 0;
-  padding: 50px;
-  width: 100%;
   height: 100%;
-  background-color: #999;
+  width: 100%;
+  background-color: red;
+  overflow: hidden;
+  z-index: -1000;
+  .half{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    z-index: -100;
+    overflow: hidden;
+  }
+  #left{
+    left: 0;
+  }
+  #right{
+    left: 50%;
+  }
+  #left > .image{
+    background: url("/images/BG_Studio.jpg") left no-repeat;
+    background-size: cover;
+    @include transition(3s);
+    background-position: 40%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    @include scale(1.01);
+    // transition: opacity 2s ease-out 0.5s;
+
+  }
+  #right > .image{
+    background: url("/images/BG_Startup.jpg") right no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    @include transition(3s);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    @include scale(1.01);
+  }
 }
+.intro{
+  display: block;
+  // height: 100%;
+  width: 100%;
+  margin-top: 40%;
+  padding-left: 50px;
+  padding-right: 50px;
+  @include no-flicker;
+  &:hover{
+    .text, .title{
+      color: $YH1;
+      @include transition(.3s);
+    }
+  }
+  .title{
+    @include no-flicker;
+    @include transition(0.3s);
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin: 0;
+  }
+  .text{
+    @include no-flicker;
+    @include opacity(100);
+    @include transition(.3s);
+    margin: auto 0;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: white;
+  }
+
+}
+#logo{
+  margin-top: 40px;
+  display: inline-block;
+  @include scale(.8);
+
+}
+// div{
+//   @include opacity(0);
+//   -webkit-transition: opacity 1s ease-out 0.5s;
+//      -moz-transition: opacity 1s ease-out 0.5s;
+//      -o-transition: opacity 1s ease-out 0.5s;
+//      transition: opacity 1s ease-out 0.5s;
+// }
+#baz{
+  opacity: 1;
+  @include transition(.3s);
+}
+.cont{
+  position: absolute;
+  right: 40px;
+  top: 45px;
+}
+
+//Contact
+#contact{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  @include opacity(30);
+  .image{
+    position: absolute;
+    background: url('/images/BG_contact.jpg') left no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+}
+.urname{
+  display: inline-block;
+  position: relative;
+  top: 300px;
+  p.name{
+    background-color: #333;
+    color: $YH1;
+    font-size: 40px;
+    // width:500px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+  }
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+}
+.casing{
+  position: relative;
+  width: 370px;
+  height: 170px;
+  padding: 0 20px 0 50px;
+  .foto{
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/42.jpg");
+    background-size: cover;
+    background-color: #999;
+  }
+  span.fio{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  span.post{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size: 10px;
+    font-style: italic;
+    color: $YH1;
+  }
+}
+
+.menu{
+  position: absolute;
+  top:0;
+  z-index: 100;
+  width: 100%;
+}
+//Project
+.part{
+  width: 100%;
+  margin-bottom: 50px;
+  img{
+    width: 100%
+  }
+}
+.banner{
+  // height: 250px;
+  position: absolute;
+  left: 70px;
+  top: -15px;
+  @include scale(.95);
+}
+.option{
+  text-align: left;
+  display: block;
+  position: absolute;
+  // width: 120px;
+  top: 150px;
+  left: 20px;
+  a{
+    color: #333;
+  }
+}
+.big{
+  // height: 200px;
+}
+#project{
+  font-size: 14px;
+}
+.footer{
+  margin-top: 30px;
+}
+//Own-project
+.owl-carousel{
+  height: 100%;
+  color: white;
+  position: absolute;
+}
+.owl-item{
+  height: 100px;
+  z-index: -10;
+  .guru{
+    height: 100%;
+    background-color: red;
+    background-size: cover;
+    background-position: 20%;
+    background-image: url(images/BG_Gurustroy.jpg);
+  }
+  .tales{
+    height: 100%;
+    background-color: red;
+    background-size: cover;
+    background-position: 20%;
+    background-image: url(images/BG_Fairytales.jpg);
+  }
+}
+.desc{
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  p{
+    font-weight: 200;
+    font-family: 'PT Serif', serif;
+    margin-bottom: 20px;
+  }
+  h3{
+    margin-bottom: 40px;
+  }
+}
+.owl-controls{
+  height: 100%;
+  // position: absolute;
+  bottom: 0;
+}
+.owl-nav{
+  // margin-top: 300px;
+}
+.owl-prev, .owl-next{
+  height: 100%;
+  width: 80px;
+  position: fixed;
+  // padding-top: 50%;
+  &:before{
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625em;
+  }
+}
+.owl-prev{
+  text-align: left;
+  left: 0;
+}
+.owl-next{
+  right: 0;
+  margin-right: -15px;
+}
+.fa-angle-right, .fa-angle-left{
+  @include transition(.2s);
+}
+.fa-angle-right:hover, .fa-angle-left:hover{
+  color: $YH1;
+  @include transition(.2s);
+}
+.inverse{
+  color: #999;
+}
+.blackText{
+  color: #333;
+}
+
+// #owl-example{
+//   width: 600px;
+//   height: 400px;
+//   margin: 0 auto;
+// }
+
+// .i{
+//   display: inline-block;
+//   width: 600px;
+//   height: 400px;
+//   width: 100%;
+//   background-repeat: no-repeat;
+// }
+
+// .owl-prev{
+//   width: 70px;
+//   height: 22px;
+//   position: relative;
+//   top: -250px;
+//   left: -350px;
+//   padding-top: 10px !important;
+// }
+// .owl-next{
+//   width: 70px;
+//   height: 22px;
+//   position: relative;
+//   top: -250px;
+//   right: -350px;
+//   padding-top: 10px !important;
+// }
+
+// #project{
+//   position: absolute;
+//   display: block;
+//   top: 0;
+//   padding: 50px;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #999;
+// }
 
 #owl-example{
   position: absolute;
@@ -30,7 +357,6 @@ body {
   bottom: 0;
   margin: 0 auto;
 }
-
 
 
 .language{
@@ -74,211 +400,12 @@ body {
     @include rotate(180deg);
   }
 }
-#page{
-  position: absolute;
-  display: block;
-  top: 0;
-  height: 100%;
+
+
+.footer{
   width: 100%;
-  background-color: #999;
-  overflow: hidden;
-  z-index: 0;
-  .half{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-  }
-  .left{
-    left: 0;
-  }
-  .right{
-    left: 50%;
-  }
-  .left.image{
-    background: url("/images/left.jpg") left no-repeat;
-    background-size: cover;
-  }
-  .right.image{
-    background: url("/images/right.jpg") right no-repeat;
-    background-size: cover;
-  }
-  .yellow{
-    background-color: $YH1;
-    left: 0;
-    @include opacity(90);
-  }
+  height: 80px;
+  background-color: $YH1;
 }
-.intro{
-  @include no-flicker;
-  @include opacity(100);
-  @include transition(.3s);
-  margin: auto 0;
-  padding: 350px 50px;
-  text-align: center;
-  z-index: 100;
-}
-
-.title{
-  @include no-flicker;
-  @include transition(0.3s);
-  font-size: 50px;
-  font-weight: bold;
-  position: relative;
-  text-align: center;
-  color: white;
-  width: 50%;
-  top: 100px;
-  z-index: 1000;
-}
-.subtitle{
-  position: relative;
-  @include no-flicker;
-  // @include transition(0.2s);
-  text-align: center;
-  font-size: 40px;
-  color: white;
-  font-weight: bold;
-  top: 200px;
-  z-index: 1000;
-}
-.text_hide{
-  @include opacity(0);
-}
-.text_black{
-  color: #333;
-}
-
-#black_back{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  @include opacity(75);
-}
-#back{
-  position: absolute;
-  height: 100%;
-  width: auto;
-  background-color: #aaa;
-  // background-image: url("/images/contact.jpg");
-  // background-size: cover;
-}
-.casing{
-  position: relative;
-  width: 370px;
-  height: 170px;
-  padding: 0 20px 0 50px;
-  .foto{
-    width: 100%;
-    height: 100%;
-    background-image: url("/images/42.jpg");
-    background-size: cover;
-    background-color: #999;
-  }
-  span.fio{
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-  }
-  span.post{
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    font-size: 10px;
-    font-style: italic;
-    color: $YH1;
-  }
-}
-.owl-carousel{
-  height: 100%;
-  color: white;
-  position: fixed;
-}
-.owl-item{
-  background-color: red;
-  background-size: cover;
-  height: 100px;
-  z-index: -10;
-  background-image: url(images/spain.jpg);
-}
-.desc{
-  width: 250px;
-
-  position: absolute;
-  top: 20%;
-  left: 60%;
-}
-.owl-controls{
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  bottom: 0;
-}
-.owl-dots{
-  width: 80%;
-  height: 20px;
-  position: absolute;
-  bottom: 0;
-  margin: 0 10%;
-}
-.owl-dot{
-  display: inline-block;
-  margin-right: 20px;
-  width: 20px;
-  height: 20px;
-  content: "o";
-  background-color: yellow;
-  z-index: 1000;
-}
-.owl-dot.active{
-  color: red;
-}
-.owl-prev{
-  position: fixed;
-  left: 0;
-}
-.owl-next{
-  position: fixed;
-  right: 0;
-}
-
-
-
-// #owl-example{
-//   width: 600px;
-//   height: 400px;
-//   margin: 0 auto;
-// }
-
-// .i{
-//   display: inline-block;
-//   width: 600px;
-//   height: 400px;
-//   width: 100%;
-//   background-repeat: no-repeat;
-// }
-
-// .owl-prev{
-//   width: 70px;
-//   height: 22px;
-//   position: relative;
-//   top: -250px;
-//   left: -350px;
-//   padding-top: 10px !important;
-// }
-// .owl-next{
-//   width: 70px;
-//   height: 22px;
-//   position: relative;
-//   top: -250px;
-//   right: -350px;
-//   padding-top: 10px !important;
-// }
-
-
-
 
 

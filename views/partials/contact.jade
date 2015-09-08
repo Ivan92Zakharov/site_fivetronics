@@ -1,18 +1,16 @@
-#page
-  video#back(muted loop preload="auto" poster="/images/contact.jpg" autoplay)
-    source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4")
-    source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm")
-  //- #black_back
-  a(href="/") BACK
-  .casing
-    .foto
-    span.fio Николай Лермонтов
-    br
-    span.post лучший программист
-  br
-  .casing
-    .foto(style='background-image: url("/images/24.jpg");')
-    span.fio Глеб Глинберг
-    br
-    span.post главный бухгалтер
+#contact
+  .image
 
+.menu
+  a#logo(href="/")
+    img#baz(src="/images/logo-in.png")
+  a.btn.btn-default.cont(href="contact") Контакты
+
+
+.urname
+  p.name ООО «Файвтроникс»
+  p
+    a(href="tel:+79640768111") +7 964 076-81-11
+  p г. Якутск, Дзержинского 76/1, Технопарк «Якутия», Блок С, каб. 204
+  p
+    a(href="mailto:fivetronics@gmail.com") fivetronics@gmail.com

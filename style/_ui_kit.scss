@@ -1,9 +1,28 @@
-$YH1: #ECE91F;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400italic);
+$YH1: #ffe200;
+$YH2: #fc0;
+$GH1: #f7f8f9;
 
 #page a{
     text-decoration: none;
     color: #333;
   }
+.btn-default{
+  border: none;
+  background: $GH1;
+  padding: 4px 15px;
+  @include transition(.3s);
+  &:hover{
+    background: $YH1;
+    @include opacity(80);
+    @include transition(.3s);
+  }
+  &:active{
+    background: $YH2 !important;
+    @include opacity(80);
+  }
+}
 
 @mixin opacity($o) {
   filter: alpha(opacity=$o);
@@ -37,6 +56,13 @@ $YH1: #ECE91F;
        -ms-transform: rotate($deg);
         -o-transform: rotate($deg);
            transform: rotate($deg);
+}
+@mixin scale($deg) {
+   -webkit-transform: scale($deg);
+      -moz-transform: scale($deg);
+       -ms-transform: scale($deg);
+        -o-transform: scale($deg);
+           transform: scale($deg);
 }
 @mixin no-flicker {
   -webkit-perspective: 1000;
