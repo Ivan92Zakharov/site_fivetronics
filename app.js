@@ -16,6 +16,12 @@ var port         = process.env.PORT || 5000;
 var app          = express();
 var production   = process.env.NODE_ENV === 'production';
 // view engine setup
+var ploy        = require('./ploy-client');
+var api         = ploy({
+  key:    'fd1bd3bda91d6044de77426f518b7424',
+  secret: '5603419769ed9177792b0ace32a196ed'
+});
+
 
 app.use(logger('dev'));
 

@@ -20,9 +20,12 @@
     "express": "~4.12.2",
     "jade": "~1.9.2",
     "morgan": "~1.5.1",
+    "talker": "^2.0.4",
     "shake.js": "^1.2.2",
     "quesadilla": "^1.0.0",
-    "serve-favicon": "~2.2.0"
+    "serve-favicon": "~2.2.0",
+    "through2": "^0.6.5",
+    "websocket-stream": "^1.5.0"
   },
   "description": "Portfolio site for the company Fivetronics",
   "devDependencies": {},
