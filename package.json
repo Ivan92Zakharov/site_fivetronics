@@ -23,5 +23,21 @@
     "shake.js": "^1.2.2",
     "quesadilla": "^1.0.0",
     "serve-favicon": "~2.2.0"
-  }
+  },
+  "description": "Portfolio site for the company Fivetronics",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ivan92Zakharov/site_fivetronics.git"
+  },
+  "keywords": [
+    "web",
+    "fivetronics"
+  ],
+  "author": "Fivetronics",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivan92Zakharov/site_fivetronics/issues"
+  },
+  "homepage": "https://github.com/Ivan92Zakharov/site_fivetronics"
 }
