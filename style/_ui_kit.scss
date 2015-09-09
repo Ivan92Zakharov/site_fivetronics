@@ -13,6 +13,7 @@ $GH1: #f7f8f9;
   background: $GH1;
   padding: 4px 15px;
   @include transition(.3s);
+  z-index: 10000;
   &:hover{
     background: $YH1;
     @include opacity(80);
