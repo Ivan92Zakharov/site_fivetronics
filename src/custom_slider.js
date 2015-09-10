@@ -18,11 +18,11 @@ $(document).ready(function() {
   $(".owl-next, .owl-prev").click(function(){
     if ($(".active").children(".customItem").hasClass("direct")){
       $(".fa-angle-left, .fa-angle-right").addClass("inverse");
-      $("#imgLogo").attr("src","/images/logo-in.png");
+      $("#imgLogo").attr("src","/images/logotype-in.png");
     }
     else{
       $(".fa-angle-left, .fa-angle-right").removeClass("inverse");
-      $("#imgLogo").attr("src","/images/logo.png");
+      $("#imgLogo").attr("src","/images/logotype.png");
     }
   });
   // var owl = $('.owl-carousel');
