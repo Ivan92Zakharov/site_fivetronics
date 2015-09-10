@@ -1,3 +1,3 @@
-module.exports = ['$resource', function ($resource) {
-  return 0;
-}];
+// module.exports = ['$resource', function ($resource) {
+//   return 0;
+// }];
