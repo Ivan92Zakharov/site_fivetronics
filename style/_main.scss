@@ -96,33 +96,7 @@ body {
   }
 
 }
-#logo{
-  // position: absolute;
-  // margin: auto 0;
-  width: 500px;
-  margin-top: 40px;
-  display: inline-block;
-  @include scale(.8);
-  z-index: 10000;
-  #imgLogo{
-    // opacity: 1;
-    z-index: 10000;
-    @include transition(.3s);
-  }
-}
-#btnGr{
-  position: absolute;
-  // margin-top:45px;
-  top:45px;
-  right: 40px;
-  z-index: 10000;
-  // width: 10/0%;
-}
-.btnPr{
-  display: inine-block;
-  position: relative;
-  top: -33px
-}
+
 //Contact
 .contact{
   // position: absolute;
