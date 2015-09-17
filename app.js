@@ -27,8 +27,8 @@ app.use(logger('dev'));
 
 app.use(enchilada({
   src: path.join(__dirname, '/src'),
-  cache: production, // only cache in production
-  compress: production // only compress in production
+  cache: true, // only cache in production
+  compress: true // only compress in production
 }));
 app.use(quesadilla(path.join(__dirname, '/style')));
 app.use(express.static(__dirname + '/public'));
