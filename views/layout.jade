@@ -4,15 +4,15 @@ html(id="ng-app" ng-app='fivetronics', ng-cloak)
     base(href='/')
     meta(charset='UTF-8')
     //- meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="viewport" content="width=device-width,height=device-height, initial-scale=1")
     title= title
     link(rel='stylesheet', href='/style.css')
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+    script(type='text/javascript', src='analytics.js')
     script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
     script(type='text/javascript', src='angular.min.js')
     script(type='text/javascript', src='hover.js')
     script(type="text/javascript", src="https://code.jquery.com/color/jquery.color-git.js")
-
     script(type='text/javascript', src='script.js')
   body
     block content

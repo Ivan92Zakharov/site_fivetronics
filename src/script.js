@@ -9,7 +9,7 @@ var myApp = angular.module('fivetronics',
   require('angular-ui-router')
   ]);
 
-myApp.config( function($stateProvider, $urlRouterProvider, $locationProvider ) {
+myApp.config( function($stateProvider ) {
 
   $stateProvider
     .state('home', {
@@ -29,18 +29,20 @@ myApp.config( function($stateProvider, $urlRouterProvider, $locationProvider ) {
       url: "/own-project",
       templateUrl: "partials/own-project"
     })
+});
+
+myApp.config( function( $urlRouterProvider, $locationProvider ) {
   $locationProvider.html5Mode(true);
 
   $urlRouterProvider.otherwise("/");
 
-
+});
 
   // .controller('homeCtrl',         require('./controllers/home'))
   // .controller('contactCtrl',      require('./controllers/contact'))
   // .controller('projectCtrl',      require('./controllers/project'))
   // .controller('own-projectCtrl',  require('./controllers/own-project'))
   // .factory('Home',                require('./services/home'))
-  });
 
 myApp.config(['$translateProvider', function ($translateProvider) {
   var foo = require('../public/json/home/en.json');
@@ -48,7 +50,6 @@ myApp.config(['$translateProvider', function ($translateProvider) {
   // add translation table
   $translateProvider.translations('en', foo)
   $translateProvider.translations('ru', bar)
-
 
   $translateProvider.preferredLanguage('en');
 
