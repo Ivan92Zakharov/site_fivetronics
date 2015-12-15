@@ -25,15 +25,6 @@ $(document).ready(function() {
       $("#imgLogo").attr("src","/images/logotype.png");
     }
   });
-  // var owl = $('.owl-carousel');
-  // owl.on('prev.owl.carousel', function(event){
-  //   animateOut: "slideInRight"
-  //   console.log('Hello!!!');
-  // });
-
-
 });
 
 
-// owl-prev
-// owl-next
