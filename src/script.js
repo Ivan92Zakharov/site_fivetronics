@@ -1,3 +1,12 @@
+$(document).ready(function() {
+
+  setTimeout(function(){
+    $('body').toggleClass('loaded');
+  }, 500);
+
+});
+
+
 
 var myApp = angular.module('fivetronics',
   [
@@ -26,5 +35,4 @@ myApp.config( function( $urlRouterProvider, $locationProvider ) {
   $urlRouterProvider.otherwise("/");
 
 });
-
 
