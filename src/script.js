@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
     $('body').toggleClass('loaded');
-  }, 1500);
+  }, 2000);
 
 });
 
