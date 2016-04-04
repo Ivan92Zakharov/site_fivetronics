@@ -26,6 +26,10 @@ myApp.config( function($stateProvider ) {
       url: "/contact",
       templateUrl: "partials/contact"
     })
+    .state('own', {
+      url: "/own",
+      templateUrl: "partials/own-project"
+    })
 
 });
 
